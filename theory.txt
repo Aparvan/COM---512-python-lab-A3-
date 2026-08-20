@@ -1,0 +1,19 @@
+type() fxns and typecasting
+type() fdxn is used to find the data type of a given variable in python.
+a = 31
+type(a) # class<int>
+
+b= "31"
+type(b) # class<str>
+
+A number can be converted into a string and vice versa 
+There are many fxns to convert one data type into another.
+
+str(31) # int to str conversion
+int("32") str to int conversion
+float(32) int to float conversion
+
+Input() fxn
+This fxn allows the user to take input from the keyboard as string.
+
+a = input("enter name: ") # if a is "harry" , the user entered harry
