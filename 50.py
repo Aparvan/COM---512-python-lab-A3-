@@ -5,7 +5,7 @@
 pin = input("Enter pin: ")
 correct_pin = "1234"
 if len(pin)==4 and pin.isdigit():
-    print("PIN is correct")
+    print("PIN must exactly 4 digits")
 elif pin == correct_pin:
     print("PIN is correct. The lock is open.")
 else:
