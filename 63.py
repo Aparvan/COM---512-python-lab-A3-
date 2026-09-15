@@ -11,4 +11,3 @@ while n > 9:
     n = total
 
 print("Single digit result:", n)
-

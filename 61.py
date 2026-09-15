@@ -10,4 +10,4 @@ while n > 0:
     binary = str(remainder) + binary
     n = n // 2
 
-print("Binary number is:", binary)  
+print("Binary number is:", binary) 
