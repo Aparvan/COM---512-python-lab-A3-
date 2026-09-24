@@ -1,0 +1,17 @@
+'''
+wap to store one student data as a tuple:name,rollno,and marks.Dispaly grade based on marks.
+'''
+std = ("Raj","R019",90)
+marks = int(input("Enter marks: "))
+if marks >= 90:
+    print("Grade A")
+elif marks >= 80:
+    print("Grade B")
+elif marks >= 70:
+    print("Grade C")
+elif marks >= 60:
+    print("Grade D")
+elif marks >= 50:
+    print("Grade E")
+else:
+    print("Grade F")    
