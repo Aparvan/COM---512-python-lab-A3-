@@ -11,36 +11,29 @@ Equal marks break the improving sequence
 Test numbers begin at 1
 do not sort the list because the original order matters.
 '''
-marks = []
-
 n = int(input("Enter number of tests: "))
+marks = []
 
 for i in range(n):
     marks.append(int(input("Enter marks: ")))
 
-best = []
-current = [marks[0]]
-
-start = 1
-best_start = 1
+start = 0
+best_start = 0
+best_length = 1
 
 for i in range(1, n):
-    if marks[i] > marks[i - 1]:
-        current.append(marks[i])
-    else:
-        if len(current) > len(best):
-            best = current
-            best_start = start
+    if marks[i] <= marks[i-1]:
+        start = i
+        length = i-start+1
+   
 
-        current = [marks[i]]
-        start = i + 1
+    if length > best_length:
+        best_length = length
+        best_start = start
 
-if len(current) > len(best):
-    best = current
-    best_start = start
+sequence = marks[best_start:best_start+best_length]
+test_range = (best_start+1,best_start+best_length)
 
-best_end = best_start + len(best) - 1
-
-print("Longest improving sequence:", best)
-print("No. of tests:", len(best))
-print("Test range:", (best_start, best_end))
+print("Longest improving sequence:", sequence)
+print("No. of tests:", best_length)
+print("Test range:", test_range)
